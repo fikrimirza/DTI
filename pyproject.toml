@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aep2cabr"
+dynamic = ["version"]
+description = "Rewrite of Bio-logic AEP2ASC: export Navigator Pro AEP databases (BLPatients.mdb, EPWinData.mdb) to cABR formats (Neuroscan .avg, text, CSV, AEP2ASC ASCII)"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = []
+
+[project.scripts]
+aep2cabr = "aep2cabr.cli:main"
+
+[project.gui-scripts]
+aep2cabr-gui = "aep2cabr.gui:run"
+
+[tool.setuptools]
+packages = ["aep2cabr"]
+
+[tool.setuptools.dynamic]
+version = {attr = "aep2cabr.__version__"}

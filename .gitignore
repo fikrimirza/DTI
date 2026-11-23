@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+# exports and real patient databases must not be committed
+export/
+hasil*/
+*.avg
+*.mdb
+!tests/fixtures/*.mdb
+*.ldb
